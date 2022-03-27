@@ -1,0 +1,148 @@
+INFO [2022-03-27 15:47:02,189] [django.utils.autoreload] [autoreload] [Process:7] [Thread:139918401615680] Watching for file changes with StatReloader
+INFO [2022-03-27 15:47:22,763] [django.server] [basehttp] [Process:7] [Thread:139918282057472] "GET / HTTP/1.1" 200 7
+WARNING [2022-03-27 15:47:22,790] [django.request] [log] [Process:7] [Thread:139918282057472] Not Found: /favicon.ico
+WARNING [2022-03-27 15:47:22,790] [django.server] [basehttp] [Process:7] [Thread:139918282057472] "GET /favicon.ico HTTP/1.1" 404 179
+INFO [2022-03-27 15:47:50,765] [django.utils.autoreload] [autoreload] [Process:7] [Thread:139918401615680] /code/Workload/config.py changed, reloading.
+INFO [2022-03-27 15:47:52,140] [django.utils.autoreload] [autoreload] [Process:33] [Thread:140216062117696] Watching for file changes with StatReloader
+INFO [2022-03-27 15:48:00,644] [django.server] [basehttp] [Process:33] [Thread:140216024659712] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 17:00:48,974] [django.utils.autoreload] [autoreload] [Process:33] [Thread:140216062117696] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:00:50,414] [django.utils.autoreload] [autoreload] [Process:49] [Thread:140360371992384] Watching for file changes with StatReloader
+INFO [2022-03-27 17:02:34,967] [django.utils.autoreload] [autoreload] [Process:49] [Thread:140360371992384] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:02:35,688] [django.utils.autoreload] [autoreload] [Process:51] [Thread:139771000842048] Watching for file changes with StatReloader
+INFO [2022-03-27 17:02:42,795] [django.utils.autoreload] [autoreload] [Process:51] [Thread:139771000842048] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:02:43,512] [django.utils.autoreload] [autoreload] [Process:53] [Thread:139793322035008] Watching for file changes with StatReloader
+INFO [2022-03-27 17:03:06,873] [django.utils.autoreload] [autoreload] [Process:53] [Thread:139793322035008] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:03:07,569] [django.utils.autoreload] [autoreload] [Process:55] [Thread:139669246191424] Watching for file changes with StatReloader
+INFO [2022-03-27 17:03:20,765] [django.utils.autoreload] [autoreload] [Process:55] [Thread:139669246191424] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:03:21,499] [django.utils.autoreload] [autoreload] [Process:57] [Thread:139814662534976] Watching for file changes with StatReloader
+INFO [2022-03-27 17:03:27,610] [django.utils.autoreload] [autoreload] [Process:57] [Thread:139814662534976] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:03:28,335] [django.utils.autoreload] [autoreload] [Process:59] [Thread:140534143055680] Watching for file changes with StatReloader
+INFO [2022-03-27 17:06:28,528] [django.utils.autoreload] [autoreload] [Process:7] [Thread:140091345528640] Watching for file changes with StatReloader
+ERROR [2022-03-27 17:06:41,739] [django.request] [log] [Process:7] [Thread:140091229992704] Internal Server Error: /
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/code/Workload/views.py", line 25, in func
+    Writer("file.dat",test_data)
+  File "/usr/local/lib/python3.10/site-packages/oslo_concurrency/lockutils.py", line 382, in inner
+    with lock(name, lock_file_prefix, external, lock_path,
+  File "/usr/local/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.10/site-packages/oslo_concurrency/lockutils.py", line 297, in lock
+    ext_lock = external_lock(name, lock_file_prefix, lock_path)
+  File "/usr/local/lib/python3.10/site-packages/oslo_concurrency/lockutils.py", line 189, in external_lock
+    lock_file_path = _get_lock_path(name, lock_file_prefix, lock_path)
+  File "/usr/local/lib/python3.10/site-packages/oslo_concurrency/lockutils.py", line 183, in _get_lock_path
+    raise cfg.RequiredOptError('lock_path')
+oslo_config.cfg.RequiredOptError: value required for option lock_path in group [DEFAULT]
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/Workload/views.py", line 37, in index
+    j.get()
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 771, in get
+    raise self._value
+oslo_config.cfg.RequiredOptError: value required for option lock_path in group [DEFAULT]
+ERROR [2022-03-27 17:06:41,742] [django.server] [basehttp] [Process:7] [Thread:140091229992704] "GET / HTTP/1.1" 500 145
+INFO [2022-03-27 17:25:19,723] [django.utils.autoreload] [autoreload] [Process:7] [Thread:140091345528640] /code/Workload/settings.py changed, reloading.
+INFO [2022-03-27 17:25:21,315] [django.utils.autoreload] [autoreload] [Process:22] [Thread:140381729670976] Watching for file changes with StatReloader
+INFO [2022-03-27 17:34:14,451] [django.utils.autoreload] [autoreload] [Process:22] [Thread:140381729670976] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:34:15,895] [django.utils.autoreload] [autoreload] [Process:24] [Thread:140384566282048] Watching for file changes with StatReloader
+INFO [2022-03-27 17:35:48,061] [django.utils.autoreload] [autoreload] [Process:24] [Thread:140384566282048] /code/Workload/settings.py changed, reloading.
+INFO [2022-03-27 17:35:49,604] [django.utils.autoreload] [autoreload] [Process:26] [Thread:140150025631552] Watching for file changes with StatReloader
+INFO [2022-03-27 17:35:56,366] [django.utils.autoreload] [autoreload] [Process:26] [Thread:140150025631552] /code/Workload/settings.py changed, reloading.
+INFO [2022-03-27 17:35:57,754] [django.utils.autoreload] [autoreload] [Process:28] [Thread:139681906612032] Watching for file changes with StatReloader
+INFO [2022-03-27 17:36:23,357] [django.utils.autoreload] [autoreload] [Process:28] [Thread:139681906612032] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:36:24,694] [django.utils.autoreload] [autoreload] [Process:30] [Thread:139701877516096] Watching for file changes with StatReloader
+INFO [2022-03-27 17:36:32,591] [django.utils.autoreload] [autoreload] [Process:30] [Thread:139701877516096] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:36:33,924] [django.utils.autoreload] [autoreload] [Process:32] [Thread:139735883085632] Watching for file changes with StatReloader
+INFO [2022-03-27 17:36:42,985] [django.utils.autoreload] [autoreload] [Process:32] [Thread:139735883085632] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:36:44,531] [django.utils.autoreload] [autoreload] [Process:34] [Thread:140077009442624] Watching for file changes with StatReloader
+INFO [2022-03-27 17:36:53,160] [django.utils.autoreload] [autoreload] [Process:34] [Thread:140077009442624] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:36:54,973] [django.utils.autoreload] [autoreload] [Process:36] [Thread:140700290869056] Watching for file changes with StatReloader
+INFO [2022-03-27 17:38:00,539] [django.utils.autoreload] [autoreload] [Process:36] [Thread:140700290869056] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:38:02,558] [django.utils.autoreload] [autoreload] [Process:38] [Thread:139673539708736] Watching for file changes with StatReloader
+INFO [2022-03-27 17:39:09,821] [django.utils.autoreload] [autoreload] [Process:7] [Thread:140519788898112] Watching for file changes with StatReloader
+INFO [2022-03-27 17:43:37,056] [django.utils.autoreload] [autoreload] [Process:7] [Thread:140519788898112] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:43:38,710] [django.utils.autoreload] [autoreload] [Process:9] [Thread:140434663319360] Watching for file changes with StatReloader
+INFO [2022-03-27 17:43:48,524] [django.server] [basehttp] [Process:9] [Thread:140434553616128] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 17:46:07,361] [django.utils.autoreload] [autoreload] [Process:9] [Thread:140434663319360] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:46:08,787] [django.utils.autoreload] [autoreload] [Process:24] [Thread:140613261121344] Watching for file changes with StatReloader
+INFO [2022-03-27 17:46:19,932] [django.utils.autoreload] [autoreload] [Process:24] [Thread:140613261121344] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:46:20,614] [django.utils.autoreload] [autoreload] [Process:26] [Thread:139901345683264] Watching for file changes with StatReloader
+INFO [2022-03-27 17:46:33,591] [django.server] [basehttp] [Process:26] [Thread:139901302081280] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 17:47:05,720] [django.utils.autoreload] [autoreload] [Process:26] [Thread:139901345683264] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:47:07,139] [django.utils.autoreload] [autoreload] [Process:41] [Thread:140444126533440] Watching for file changes with StatReloader
+INFO [2022-03-27 17:47:14,424] [django.utils.autoreload] [autoreload] [Process:41] [Thread:140444126533440] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:47:15,949] [django.utils.autoreload] [autoreload] [Process:43] [Thread:140292440876864] Watching for file changes with StatReloader
+INFO [2022-03-27 17:47:25,984] [django.server] [basehttp] [Process:43] [Thread:140292397274880] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 17:48:00,363] [django.utils.autoreload] [autoreload] [Process:43] [Thread:140292440876864] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:48:01,768] [django.utils.autoreload] [autoreload] [Process:58] [Thread:140555615196992] Watching for file changes with StatReloader
+INFO [2022-03-27 17:48:19,033] [django.server] [basehttp] [Process:58] [Thread:140555571595008] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 17:51:21,793] [django.server] [basehttp] [Process:58] [Thread:140555571595008] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 17:54:49,489] [django.utils.autoreload] [autoreload] [Process:58] [Thread:140555615196992] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:54:50,979] [django.utils.autoreload] [autoreload] [Process:85] [Thread:139858494519104] Watching for file changes with StatReloader
+INFO [2022-03-27 17:56:20,783] [django.utils.autoreload] [autoreload] [Process:85] [Thread:139858494519104] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 17:56:22,452] [django.utils.autoreload] [autoreload] [Process:87] [Thread:140659037259584] Watching for file changes with StatReloader
+INFO [2022-03-27 18:05:30,207] [django.utils.autoreload] [autoreload] [Process:7] [Thread:140488117049152] Watching for file changes with StatReloader
+INFO [2022-03-27 18:05:50,549] [django.server] [basehttp] [Process:7] [Thread:140488073033472] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:06:18,577] [django.utils.autoreload] [autoreload] [Process:7] [Thread:140488117049152] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:06:19,963] [django.utils.autoreload] [autoreload] [Process:22] [Thread:140166939117376] Watching for file changes with StatReloader
+INFO [2022-03-27 18:06:35,739] [django.server] [basehttp] [Process:22] [Thread:140166895515392] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:06:50,840] [django.utils.autoreload] [autoreload] [Process:22] [Thread:140166939117376] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:06:52,259] [django.utils.autoreload] [autoreload] [Process:37] [Thread:139825604458304] Watching for file changes with StatReloader
+INFO [2022-03-27 18:08:07,060] [django.utils.autoreload] [autoreload] [Process:37] [Thread:139825604458304] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:08:08,811] [django.utils.autoreload] [autoreload] [Process:39] [Thread:140682740049728] Watching for file changes with StatReloader
+INFO [2022-03-27 18:08:20,349] [django.server] [basehttp] [Process:39] [Thread:140682696447744] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:08:46,080] [django.utils.autoreload] [autoreload] [Process:39] [Thread:140682740049728] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:08:47,546] [django.utils.autoreload] [autoreload] [Process:54] [Thread:140715202746176] Watching for file changes with StatReloader
+INFO [2022-03-27 18:27:03,476] [django.utils.autoreload] [autoreload] [Process:54] [Thread:140715202746176] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:27:04,965] [django.utils.autoreload] [autoreload] [Process:56] [Thread:140691558586176] Watching for file changes with StatReloader
+INFO [2022-03-27 18:31:35,947] [django.utils.autoreload] [autoreload] [Process:56] [Thread:140691558586176] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:31:37,548] [django.utils.autoreload] [autoreload] [Process:58] [Thread:140445618599744] Watching for file changes with StatReloader
+INFO [2022-03-27 18:32:06,115] [django.utils.autoreload] [autoreload] [Process:58] [Thread:140445618599744] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:32:07,836] [django.utils.autoreload] [autoreload] [Process:60] [Thread:140366012249920] Watching for file changes with StatReloader
+INFO [2022-03-27 18:32:24,063] [django.utils.autoreload] [autoreload] [Process:60] [Thread:140366012249920] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:32:25,820] [django.utils.autoreload] [autoreload] [Process:62] [Thread:139721928279872] Watching for file changes with StatReloader
+INFO [2022-03-27 18:33:00,632] [django.utils.autoreload] [autoreload] [Process:62] [Thread:139721928279872] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:33:02,414] [django.utils.autoreload] [autoreload] [Process:64] [Thread:139682617841472] Watching for file changes with StatReloader
+INFO [2022-03-27 18:33:31,390] [django.server] [basehttp] [Process:64] [Thread:139682565846784] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:37:31,545] [django.utils.autoreload] [autoreload] [Process:64] [Thread:139682617841472] /code/Workload/settings.py changed, reloading.
+INFO [2022-03-27 18:40:27,629] [django.utils.autoreload] [autoreload] [Process:93] [Thread:140592867735360] Watching for file changes with StatReloader
+INFO [2022-03-27 18:40:50,329] [django.utils.autoreload] [autoreload] [Process:93] [Thread:140592867735360] /code/Workload/settings.py changed, reloading.
+INFO [2022-03-27 18:40:51,964] [django.utils.autoreload] [autoreload] [Process:95] [Thread:140539793438528] Watching for file changes with StatReloader
+INFO [2022-03-27 18:41:36,517] [django.utils.autoreload] [autoreload] [Process:95] [Thread:140539793438528] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:41:38,144] [django.utils.autoreload] [autoreload] [Process:97] [Thread:140161504225088] Watching for file changes with StatReloader
+INFO [2022-03-27 18:42:00,866] [django.utils.autoreload] [autoreload] [Process:97] [Thread:140161504225088] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:42:02,428] [django.utils.autoreload] [autoreload] [Process:99] [Thread:139824978675520] Watching for file changes with StatReloader
+INFO [2022-03-27 18:42:33,163] [django.server] [basehttp] [Process:99] [Thread:139824868620032] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:43:19,214] [django.server] [basehttp] [Process:99] [Thread:139824868620032] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:44:42,158] [django.utils.autoreload] [autoreload] [Process:99] [Thread:139824978675520] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:44:43,722] [django.utils.autoreload] [autoreload] [Process:125] [Thread:140007434323776] Watching for file changes with StatReloader
+INFO [2022-03-27 18:44:49,972] [django.utils.autoreload] [autoreload] [Process:125] [Thread:140007434323776] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:44:51,724] [django.utils.autoreload] [autoreload] [Process:127] [Thread:140046720407360] Watching for file changes with StatReloader
+INFO [2022-03-27 18:45:02,547] [django.server] [basehttp] [Process:127] [Thread:140046678120192] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:45:11,336] [django.server] [basehttp] [Process:127] [Thread:140046678120192] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:45:26,503] [django.server] [basehttp] [Process:127] [Thread:140046678120192] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:45:43,812] [django.server] [basehttp] [Process:127] [Thread:140046678120192] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:46:12,705] [django.utils.autoreload] [autoreload] [Process:127] [Thread:140046720407360] /code/Workload/config.py changed, reloading.
+INFO [2022-03-27 18:46:14,223] [django.utils.autoreload] [autoreload] [Process:175] [Thread:139975845164864] Watching for file changes with StatReloader
+INFO [2022-03-27 18:46:27,160] [django.server] [basehttp] [Process:175] [Thread:139975735637760] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:46:44,912] [django.server] [basehttp] [Process:175] [Thread:139975735637760] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:47:09,610] [django.utils.autoreload] [autoreload] [Process:175] [Thread:139975845164864] /code/Workload/config.py changed, reloading.
+INFO [2022-03-27 18:47:11,112] [django.utils.autoreload] [autoreload] [Process:201] [Thread:140496730486592] Watching for file changes with StatReloader
+INFO [2022-03-27 18:47:19,058] [django.server] [basehttp] [Process:201] [Thread:140496688199424] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:47:27,846] [django.server] [basehttp] [Process:201] [Thread:140496688199424] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:47:33,560] [django.server] [basehttp] [Process:201] [Thread:140496688199424] "GET / HTTP/1.1" 200 7
+INFO [2022-03-27 18:47:51,434] [django.utils.autoreload] [autoreload] [Process:201] [Thread:140496730486592] /code/Workload/views.py changed, reloading.
+INFO [2022-03-27 18:47:52,945] [django.utils.autoreload] [autoreload] [Process:238] [Thread:139801259456320] Watching for file changes with StatReloader
+INFO [2022-03-27 18:53:47,134] [django.utils.autoreload] [autoreload] [Process:238] [Thread:139801259456320] /code/Workload/settings.py changed, reloading.
+INFO [2022-03-27 18:53:48,654] [django.utils.autoreload] [autoreload] [Process:240] [Thread:139746493613888] Watching for file changes with StatReloader

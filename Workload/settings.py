@@ -150,3 +150,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOCK_PATH = os.path.join(BASE_DIR, 'tmp/')
+
+FILE_PATH = os.path.join(BASE_DIR, 'file.dat')
