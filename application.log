@@ -197,3 +197,44 @@ INFO [2022-03-29 12:18:19,364] [django.utils.autoreload] [autoreload] [Process:2
 INFO [2022-03-29 12:18:20,727] [django.utils.autoreload] [autoreload] [Process:258] [Thread:140646795335488] Watching for file changes with StatReloader
 INFO [2022-03-29 12:18:28,134] [django.utils.autoreload] [autoreload] [Process:258] [Thread:140646795335488] /code/Workload/views.py changed, reloading.
 INFO [2022-03-29 12:18:29,494] [django.utils.autoreload] [autoreload] [Process:260] [Thread:140318125229888] Watching for file changes with StatReloader
+INFO [2022-03-29 14:06:01,050] [django.utils.autoreload] [autoreload] [Process:260] [Thread:140318125229888] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 14:06:02,451] [django.utils.autoreload] [autoreload] [Process:262] [Thread:140343456429888] Watching for file changes with StatReloader
+INFO [2022-03-29 14:10:14,746] [django.utils.autoreload] [autoreload] [Process:262] [Thread:140343456429888] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 14:10:16,089] [django.utils.autoreload] [autoreload] [Process:264] [Thread:140205655766848] Watching for file changes with StatReloader
+INFO [2022-03-29 14:10:24,379] [django.utils.autoreload] [autoreload] [Process:264] [Thread:140205655766848] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 14:10:25,717] [django.utils.autoreload] [autoreload] [Process:266] [Thread:140054648678208] Watching for file changes with StatReloader
+INFO [2022-03-29 14:11:10,805] [django.utils.autoreload] [autoreload] [Process:266] [Thread:140054648678208] /code/Workload/config.py changed, reloading.
+INFO [2022-03-29 14:11:12,222] [django.utils.autoreload] [autoreload] [Process:268] [Thread:140161724057408] Watching for file changes with StatReloader
+INFO [2022-03-29 14:11:37,787] [django.utils.autoreload] [autoreload] [Process:268] [Thread:140161724057408] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 14:11:39,147] [django.utils.autoreload] [autoreload] [Process:270] [Thread:139931487049536] Watching for file changes with StatReloader
+ERROR [2022-03-29 14:12:39,727] [django.request] [log] [Process:270] [Thread:139931376678656] Internal Server Error: /
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/code/Workload/views.py", line 34, in func
+    for n in random.sample(range(1000), thread_alloc):
+  File "/usr/local/lib/python3.10/random.py", line 482, in sample
+    raise ValueError("Sample larger than population or is negative")
+ValueError: Sample larger than population or is negative
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/Workload/views.py", line 51, in index
+    j.get()
+  File "/usr/local/lib/python3.10/multiprocessing/pool.py", line 771, in get
+    raise self._value
+ValueError: Sample larger than population or is negative
+ERROR [2022-03-29 14:12:39,735] [django.server] [basehttp] [Process:270] [Thread:139931376678656] "GET / HTTP/1.1" 500 145
+INFO [2022-03-29 14:15:10,190] [django.utils.autoreload] [autoreload] [Process:270] [Thread:139931487049536] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 14:15:11,548] [django.utils.autoreload] [autoreload] [Process:285] [Thread:140697709532992] Watching for file changes with StatReloader
+INFO [2022-03-29 14:16:27,862] [django.utils.autoreload] [autoreload] [Process:8] [Thread:140483120998208] Watching for file changes with StatReloader
+INFO [2022-03-29 14:17:03,409] [django.server] [basehttp] [Process:8] [Thread:140483011540736] "GET / HTTP/1.1" 200 7
+INFO [2022-03-29 14:17:49,319] [django.server] [basehttp] [Process:8] [Thread:140483011540736] "GET / HTTP/1.1" 200 7

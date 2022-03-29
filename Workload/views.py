@@ -5,12 +5,15 @@ from oslo_concurrency import lockutils
 from oslo_concurrency import processutils
 from django.conf import settings
 import os
+import random
 
 
 arr=[0 for i in range(BIG_ARR_LEN)]
 thread_alloc=BIG_ARR_LEN//NUM_THREADS
 
 block_size=FILE_SIZE//1024
+
+main_list=[]
 
 
 lockutils.set_defaults(settings.LOCK_PATH)
@@ -24,8 +27,13 @@ def Writer():
 def func(threadid):
     start_idx=threadid*thread_alloc
     end_idx=start_idx+thread_alloc
+    #memory workload
     for i in range(start_idx,end_idx):
         arr[i]+=1
+    #cpu workload
+    for n in random.sample(range(BIG_ARR_LEN), thread_alloc):
+        main_list.append(n)
+    #I/O workload
     Writer()
     
 
