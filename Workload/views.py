@@ -32,7 +32,7 @@ def func(threadid):
     for i in range(start_idx,end_idx):
         arr[i]+=1
     #cpu workload
-    for n in random.sample(range_arr, thread_alloc):
+    for n in range(start_idx,end_idx):
         main_list.append(n)
     #I/O workload
     Writer()
