@@ -7,8 +7,9 @@ from django.conf import settings
 import os
 import random
 
+range_arr=range(BIG_ARR_LEN)
 
-arr=[0 for i in range(BIG_ARR_LEN)]
+arr=[0 for i in range_arr]
 thread_alloc=BIG_ARR_LEN//NUM_THREADS
 
 block_size=FILE_SIZE//1024
@@ -31,7 +32,7 @@ def func(threadid):
     for i in range(start_idx,end_idx):
         arr[i]+=1
     #cpu workload
-    for n in random.sample(range(BIG_ARR_LEN), thread_alloc):
+    for n in random.sample(range_arr, thread_alloc):
         main_list.append(n)
     #I/O workload
     Writer()

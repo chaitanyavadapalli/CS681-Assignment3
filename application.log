@@ -238,3 +238,9 @@ INFO [2022-03-29 14:15:11,548] [django.utils.autoreload] [autoreload] [Process:2
 INFO [2022-03-29 14:16:27,862] [django.utils.autoreload] [autoreload] [Process:8] [Thread:140483120998208] Watching for file changes with StatReloader
 INFO [2022-03-29 14:17:03,409] [django.server] [basehttp] [Process:8] [Thread:140483011540736] "GET / HTTP/1.1" 200 7
 INFO [2022-03-29 14:17:49,319] [django.server] [basehttp] [Process:8] [Thread:140483011540736] "GET / HTTP/1.1" 200 7
+INFO [2022-03-29 14:23:33,250] [django.utils.autoreload] [autoreload] [Process:8] [Thread:140483120998208] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 14:23:34,895] [django.utils.autoreload] [autoreload] [Process:74] [Thread:140339108816704] Watching for file changes with StatReloader
+INFO [2022-03-29 14:23:43,133] [django.utils.autoreload] [autoreload] [Process:74] [Thread:140339108816704] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 14:23:44,469] [django.utils.autoreload] [autoreload] [Process:76] [Thread:139945766324032] Watching for file changes with StatReloader
+INFO [2022-03-29 14:24:24,210] [django.server] [basehttp] [Process:76] [Thread:139945724036864] "GET / HTTP/1.1" 200 7
+INFO [2022-03-29 14:24:56,571] [django.server] [basehttp] [Process:76] [Thread:139945724036864] "GET / HTTP/1.1" 200 7
