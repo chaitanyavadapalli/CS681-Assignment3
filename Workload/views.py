@@ -16,8 +16,7 @@ lockutils.set_defaults(settings.LOCK_PATH)
 
 @lockutils.synchronized('not_thread_process_safe', external=True)
 def Writer(file_name,data):
-    with open(file_name, 'a') as dest_file:
-        dest_file.write(data)
+    os.system("dd if=/dev/zero of=test.out bs=1M count=1024 oflag=direct")
 
 def func(threadid):
     start_idx=threadid*thread_alloc

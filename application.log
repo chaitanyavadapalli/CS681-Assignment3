@@ -146,3 +146,14 @@ INFO [2022-03-27 18:47:51,434] [django.utils.autoreload] [autoreload] [Process:2
 INFO [2022-03-27 18:47:52,945] [django.utils.autoreload] [autoreload] [Process:238] [Thread:139801259456320] Watching for file changes with StatReloader
 INFO [2022-03-27 18:53:47,134] [django.utils.autoreload] [autoreload] [Process:238] [Thread:139801259456320] /code/Workload/settings.py changed, reloading.
 INFO [2022-03-27 18:53:48,654] [django.utils.autoreload] [autoreload] [Process:240] [Thread:139746493613888] Watching for file changes with StatReloader
+INFO [2022-03-27 19:51:02,348] [django.utils.autoreload] [autoreload] [Process:8] [Thread:140045622335296] Watching for file changes with StatReloader
+INFO [2022-03-28 14:49:36,785] [django.utils.autoreload] [autoreload] [Process:8] [Thread:140047140702016] Watching for file changes with StatReloader
+INFO [2022-03-28 17:38:14,535] [django.server] [basehttp] [Process:8] [Thread:140047098414848] "GET / HTTP/1.1" 200 7
+WARNING [2022-03-28 17:38:14,562] [django.request] [log] [Process:8] [Thread:140047098414848] Not Found: /favicon.ico
+WARNING [2022-03-28 17:38:14,562] [django.server] [basehttp] [Process:8] [Thread:140047098414848] "GET /favicon.ico HTTP/1.1" 404 179
+INFO [2022-03-29 11:11:41,017] [django.utils.autoreload] [autoreload] [Process:8] [Thread:140047140702016] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 11:11:42,363] [django.utils.autoreload] [autoreload] [Process:23] [Thread:140607924725568] Watching for file changes with StatReloader
+INFO [2022-03-29 11:11:53,631] [django.utils.autoreload] [autoreload] [Process:23] [Thread:140607924725568] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 11:11:54,985] [django.utils.autoreload] [autoreload] [Process:25] [Thread:140408414009152] Watching for file changes with StatReloader
+INFO [2022-03-29 11:12:07,271] [django.utils.autoreload] [autoreload] [Process:25] [Thread:140408414009152] /code/Workload/views.py changed, reloading.
+INFO [2022-03-29 11:12:08,735] [django.utils.autoreload] [autoreload] [Process:27] [Thread:140143709247296] Watching for file changes with StatReloader
