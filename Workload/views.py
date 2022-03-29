@@ -9,22 +9,24 @@ import os
 
 arr=[0 for i in range(BIG_ARR_LEN)]
 thread_alloc=BIG_ARR_LEN//NUM_THREADS
-thread_file_alloc=FILE_SIZE//NUM_THREADS
+
+block_size=FILE_SIZE//1024
 
 
 lockutils.set_defaults(settings.LOCK_PATH)
 
-@lockutils.synchronized('not_thread_process_safe', external=True)
-def Writer(file_name,data):
-    os.system("dd if=/dev/zero of=test.out bs=1M count=1024 oflag=direct")
+#@lockutils.synchronized('not_thread_process_safe', external=True)
+def Writer():
+    write_comm= "dd if=/dev/zero of=test.out bs={0} count=1024 oflag=direct".format(block_size)
+
+    os.system(write_comm)
 
 def func(threadid):
     start_idx=threadid*thread_alloc
     end_idx=start_idx+thread_alloc
     for i in range(start_idx,end_idx):
         arr[i]+=1
-    test_data='\0'*thread_file_alloc
-    Writer(settings.FILE_PATH,test_data)
+    Writer()
     
 
 def index(request):
