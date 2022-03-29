@@ -39,6 +39,7 @@ def func(threadid):
     
 
 def index(request):
+    """
     if os.path.exists(settings.FILE_PATH):
         os.remove(settings.FILE_PATH)
     p=Pool()
@@ -50,5 +51,7 @@ def index(request):
     
     for j in jobs:
         j.get()
+    """
+    func(0)
     
     return HttpResponse("Success")
