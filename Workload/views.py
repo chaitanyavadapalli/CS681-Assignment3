@@ -6,6 +6,7 @@ from oslo_concurrency import processutils
 from django.conf import settings
 import os
 import random
+import uuid
 
 range_arr=range(BIG_ARR_LEN)
 
@@ -21,9 +22,10 @@ lockutils.set_defaults(settings.LOCK_PATH)
 
 #@lockutils.synchronized('not_thread_process_safe', external=True)
 def Writer():
-    write_comm= "dd if=/dev/zero of=test.out bs={0} count=1024 oflag=direct".format(block_size)
-
+    file_name=str(uuid.uuid4())+".out"
+    write_comm= "dd if=/dev/zero of={0} bs={1} count=1024 oflag=direct".format(file_name,block_size)
     os.system(write_comm)
+    os.remove(file_name)
 
 def func(threadid):
     start_idx=threadid*thread_alloc
@@ -39,9 +41,6 @@ def func(threadid):
     
 
 def index(request):
-    """
-    if os.path.exists(settings.FILE_PATH):
-        os.remove(settings.FILE_PATH)
     p=Pool()
     jobs=[]
     for i in range(NUM_THREADS):
@@ -51,7 +50,6 @@ def index(request):
     
     for j in jobs:
         j.get()
-    """
-    func(0)
     
     return HttpResponse("Success")
+
